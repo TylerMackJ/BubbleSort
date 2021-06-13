@@ -21,8 +21,6 @@ let j = count;
 function step() {
   i = (i + 1) % j;
 
-  print(i);
-
   drawRectangle(i);
   drawRectangle(i - 1);
 
