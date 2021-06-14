@@ -6,6 +6,7 @@ function setup() {
   for (let i = 0; i < count; i++) {
     numbers[i] = random(height);
   }
+  background(color(75, 74, 103));
   colorMode(HSB);
 }
 
@@ -36,12 +37,14 @@ function step() {
 }
 
 function drawRectangle(i) {
-  let c = color(0, 0, 100);
+  colorMode(RGB);
+  let c = color(75, 74, 103);
   fill(c);
   stroke(c);
   rect(i * (width / count), 0, (width / count), height);
 
-  c = color(360 * (numbers[i] / height), 50, 90);
+  colorMode(HSB);
+  c = color(360 * (numbers[i] / height), 50, 80);
   fill(c);
   stroke(c);
   rect(i * (width / count), height - numbers[i], (width / count) + 1, numbers[i]);
